@@ -8,13 +8,16 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get  'jerks'=>'handler#jerks'
-  get  'wisdom'=>'handler#any_jerk'
-  get  'jerk/:name'=>'handler#jerk_sez'
-  get  'jerk/:name/:rows'=>'handler#jerk_sez'
-  get  'sparkling_conversation/:id'=>'handler#discourse'
-  get  'sparkling_conversation' => 'handler#random_discourse'
-  get  'sparkling_conversation/:count'=>'handler#random_discourse'
+  get  'jerks/any'=>'handler#any_jerk'
+  get  'jerks/:name'=>'handler#jerk_sez'
+  get  'jerks/:name/:rows'=>'handler#jerk_sez'
+  get  'circlejerk/:id'=>'handler#discourse'
+  get  'circlejerk/any' => 'handler#random_discourse'
+  get  'circlejerk/any/:count'=>'handler#random_discourse'
   get  'search/:q'=>'handler#search'
   get  'search/:q/:page'=>'handler#search'
+  get  'version'=>'handler#version'
+  get  'operations'=>'handler#operations'
+  put  '/ur/mouth'=>'handler#hurgleburgle'
 
 end
