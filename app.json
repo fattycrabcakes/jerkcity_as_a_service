@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Ruby",
-  "description": "A barebones Rails app, which can easily be deployed to Heroku",
+  "name": "Jerkcity as as Service",
+  "description": "HAGHAULGHHALULALAHGALGHALGUAGHLUGAAH",
   "image": "heroku/ruby",
-  "repository": "https://github.com/heroku/ruby-getting-started",
+  "repository": "https://github.com/fattycrabcakes/jcaas",
   "keywords": ["ruby", "rails" ],
   "addons": [ "heroku-postgresql" ]
 }

@@ -24,9 +24,9 @@ default: &default
 development:
   <<: *default
   host: localhost
-  username: jcaas_user
-  database: jcaas
-  password: fuckl3s
+  username: <%= ENV['JCAAS_USER'] %>
+  database: <%= ENV['JCAAS_DB'] %>
+  password: <%= ENV['JCAAS_PASSWD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -83,6 +83,3 @@ test:
 #
 production:
   <<: *default
-  database: jcaas
-  username: jcaas_user
-  password: <%= ENV['DATABASE_URL'] %>

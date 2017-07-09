@@ -13,4 +13,5 @@ gem 'spring',        group: :development
 gem 'puma'
 gem 'mini_racer'
 gem 'execjs'
+gem 'kaminari', '~> 1.0.1'
 
