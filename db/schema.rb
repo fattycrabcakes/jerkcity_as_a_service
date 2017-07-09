@@ -16,7 +16,21 @@ ActiveRecord::Schema.define(version: 20140707111715) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "widgets", force: true do |t|
+  create_table "characters", force: :cascade do |t|
+    t.string "name", limit: 128
+  end
+
+  create_table "comics", force: :cascade do |t|
+    t.text "title"
+  end
+
+  create_table "dialogues", force: :cascade do |t|
+    t.integer "comic_id"
+    t.integer "speaker_id"
+    t.text    "speech"
+  end
+
+  create_table "widgets", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "stock"
